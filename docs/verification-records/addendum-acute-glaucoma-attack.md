@@ -1,0 +1,29 @@
+# Addendum: Acute Glaucoma Attack and the Boundary of the Blue-Light Filtering Entry · Verification Record (2026-09-21)
+
+Task origin: A reader asked whether Section 6, Entry 16 (blue-light filtering glasses) is problematic — "what if you stay up all night staring at a screen for over ten hours?"
+
+Existing coverage: Section 6, Entry 16's first half (blue-light filtering lenses are useless) is backed by Cochrane and is fine. The second half, "tired and dry eyes from looking at a screen can recover," was written as a statement without boundaries and reads like "looking at a screen cannot damage eyes." A whole-book search for "glaucoma" and "intraocular pressure" returns zero hits; Section 13's ophthalmologic emergency is only Entry 5 (one eye suddenly going black, the kind without pain or redness). So what's missing is the other half: the kind with pain, redness, and rainbow rings around lights. That is acute angle-closure glaucoma, which can damage the optic nerve within days, and "dark environments, prolonged head-down, dilated pupils" is exactly the posture of staying up all night staring at a phone.
+
+Landing point: Section 13 gets one new entry (Entry 6, inserted after Entry 5, with original Entries 6 to 42 renumbered to 7 to 43); Section 6, Entry 16 has its title changed, its plain-language summary rewritten, and its Note adds this exception with a pointer.
+
+References updated after renumbering: book/01 Entries 26, 31, and 32 (Section 13, Entry 11→12, 18→19, 19→20, 10→11); book/08 Entry 11 (38→39); book/17 Entry 8 (10→11); book/19 Entry 11 (20→21); docs/家庭应急装备清单.md in four places (25→26, 11→12, 13→14, 14→15); docs/遇到陌生人出事该不该停.md in one place (40→41); and eleven places inside Section 13. Section 13, Entry 38's Note referring to the Guiding Opinions' Items 5 and 9 are statutory article numbers and were not changed. The docs/引用对照.md diff was reviewed line by line: every line shows an entry number change with the pointed-to title unchanged; nothing was disrupted.
+
+## Section 13, Entry 6 (Acute angle-closure glaucoma)
+
+| Source | Verified | Figures |
+|---|---|---|
+| Zhou L, Wu S, Wang Y, Bao X, Peng T, Luo W, Ortega-Usobiaga J (2022). Clinical presentation of acute primary angle closure during the COVID-19 epidemic lockdown. Front Med 9:1078237. <https://doi.org/10.3389/fmed.2022.1078237> (Europe PMC abstract full text obtained, PMID 36590933) | Yes | 76-day lockdown in 2020 with 54 people and 64 eyes; same period in 2021 had 46 people and 51 eyes; blindness proportion 21.87% vs 7.84%; symptom onset to treatment 241.84±211.95 h vs 121.53±96.12 h (P=0.001); intraocular pressure at presentation 52.63±12.45 vs 45.16±9.79 mmHg (P=0.001); pupil diameter 5.47±1.62 vs 4.33±1.27 mm (P=0.001); glaucomatous optic neuropathy 20/64 (31.25%) vs 7/51 (13.73%) (P=0.03) |
+| Sung MS, Kim HJ, Park SW (2023). Predictors of long-term visual field outcome after an episode of acute primary angle closure. Clin Exp Ophthalmol 51(4):291-299. <https://doi.org/10.1111/ceo.14206> (PMID 36641235) | Yes | 50 people, 50 eyes, all underwent lens extraction surgery after the attack; one year later, 25 eyes (50%) had visual field defects; time from symptom onset to intraocular pressure reduction (p=0.005), intraocular pressure at presentation (p=0.014), and flat iris curvature (p=0.037) were three predictors; combined, AUC=0.921 |
+| Wang J, Wang J, Ng TK, Huang C (2025). Asymmetric intraocular pressure changes in dominant and contralateral eyes: the dark room prone provocative test. Semin Ophthalmol 40(4):325-331. <https://doi.org/10.1080/08820538.2024.2443972> (PMID 39844657) | Yes | 43 individuals with shallow anterior chamber, 86 eyes; after one hour in a dark room in prone position, both eyes' intraocular pressure rose significantly (p<.01); dominant eye median rise 3.60 mmHg, contralateral eye 2.70 mmHg (p<.05) |
+
+Graded B: All three are observational studies, with the first two single-center retrospective; the Wuhan group also confounds the differences brought by the lockdown itself. Benefit tier "large" — the metric is mortality / health endpoint, and blindness is irreversible. Cost follows the convention of the other emergency entries in Section 13: "money=0 time=medium."
+
+Deliberately not written into the body: ① No study proves that "looking at a phone causes glaucoma"; the body only writes that dark environments plus prolonged head-down posture is a trigger, noting that the high-risk group is people over 50, farsighted, and with shallow anterior chambers, and that young people staying up all night do not go down this path; ② Central serous chorioretinopathy (associated with staying up late and stress; a Retina 2016 meta-analysis gave sleep disorders OR=1.90) was not written, because the 95% CI printed in the abstract was 1.28–1.83, with the lower bound greater than the upper bound, an obvious typographical error, and the correct interval could not be obtained in verifiable form; ③ Dry eye prevalence in screen workers (BMJ Open 2016, three objective criteria gave 11.6%, 95% CI 10.5–12.9) was not written into the Benefit field; only one line in Section 6, Entry 16's Note says "dry eye that drags on can become chronic," still graded C consensus.
+
+## Changes to Section 6, Entry 16 (blue-light filtering glasses)
+
+Evidence grade, Source, and Benefit field untouched. Three changes: the title's tail gains ", but eye pain and redness should be treated as an emergency"; the plain-language summary was rewritten within 120 characters, removing assertions not present in the Benefit field; the Note adds this exception, its triggers and high-risk groups, and a line that dry eye may become chronic, with a pointer to Section 13, Entry 6.
+
+## Statistics
+
+Whole book 574 → 575 entries, A-grade 385 unchanged, B-grade 139 → 140, C-grade 50 unchanged; disputed 51, TODO 38 unchanged; original literature links under book/ 1176 → 1179; cost-effectiveness very high 105, high 267, ordinary 203.

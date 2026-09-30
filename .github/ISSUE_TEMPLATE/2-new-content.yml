@@ -1,0 +1,28 @@
+name: Suggest new content
+description: A topic worth adding that the book doesn't yet cover
+labels: ["new content"]
+body:
+  - type: markdown
+    attributes:
+      value: This book only collects advice that can answer "what it costs and what it gets back," and cites only journal papers and official documents. Translations should be maintained in your own fork and not merged into this repository; a link can be added at the top of the README.
+  - type: input
+    id: topic
+    attributes:
+      label: Topic
+      placeholder: e.g., how to apply for a professional title
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: What question should the book answer
+      description: Be specific, e.g., "which institution to go to, what materials to prepare."
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Sources you know of (optional)
+      description: Links to papers, regulations, official documents.
+    validations:
+      required: false

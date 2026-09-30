@@ -1,0 +1,35 @@
+# Verification Record: Cross-section 5 supplementary entries
+
+Verification date: 2026-09-07. Whole book 322 → 327 entries. Section 1 +2, Section 2 +1, Section 5 +1, Section 19 +1.
+
+---
+
+## I. Original text verified entry by entry
+
+| Source | Verified original text | Used in |
+| --- | --- | --- |
+| Spiegel CN, Lindaman FC (1977). Children can't fly. American Journal of Public Health. doi:10.2105/AJPH.67.12.1143 (PMID 596496) | Abstract original text: "Significant reduction in falls resulted, particularly in the Bronx, where reported falls declined 50 percent from 1973 to 1975."; 1976 New York City Health Code amendment "to require that landlords provide window guards in apartments where children ten years old and younger reside" | Section 1 "Install restrictors on windows and balconies" |
+| Unintentional Window Falls in Children and Adolescents. Academic Pediatrics (2021). doi:10.1016/j.acap.2020.07.008 (PMID 32653687) | Abstract original text: January 2007 through August 2017, "There were 38,840 ED visits and 496 regional patients who unintentionally fell from a window across the study period between 0 and 17 years old."; "The majority of falls occurred in children under the age of 6 and were related to falls from a second story or below." | Same as above, used for "it's not only high-rises that need them" |
+| US CDC "Tetanus" <https://www.cdc.gov/tetanus/about/index.html> | "Tetanus bacteria can get into someone's body through broken skin, usually through injuries."; "Tetanus can lead to death (1 in 10 cases in the United States are fatal)."; "People who didn't complete the primary series or who aren't up to date with their 10-year tetanus booster shots are also at increased risk."; "Vaccination also helps prevent tetanus in people with wounds, depending on their tetanus vaccination history." | Section 1 "Poked by a nail or wood splinter" |
+| National Health Commission Office "Notice on Issuing the Diagnostic and Treatment Standards for Non-Neonatal Tetanus (2024 Edition)" (国卫办医急函〔2024〕381 号, 2024-10-11) <https://www.gov.cn/zhengce/zhengceku/202410/content_6982262.htm> | Notice body verified; the standard itself is published as a PDF attachment | Same as above, as guidance from a current Chinese regulation |
+| Öberg M, et al. (2011). Lancet. doi:10.1016/S0140-6736(10)61388-8 (PMID 21112082) | Abstract original text: "603,000 deaths were attributable to second-hand smoke in 2004, which was about 1·0% of worldwide mortality. 47% of deaths from second-hand smoke occurred in women, 28% in children, and 26% in men."; "61% of DALYs were in children." Also: in 2004, 40% of children, 33% of male non-smokers, and 35% of female non-smokers were exposed to second-hand smoke | Section 2 "Don't smoke at home or in the car" |
+| The Associations Between Secondhand Smoke Exposure and Various Cardiovascular Diseases: A Meta-Analysis. Nicotine & Tobacco Research (2026). doi:10.1093/ntr/ntaf111 (PMID 40418017) | Abstract original text: 57 studies; "hypertension (OR: 1.28, 95% CI: 1.15 to 1.40), heart disease (OR: 1.39, 95% CI: 1.28 to 1.50), myocardial infarction (OR: 1.50, 95% CI: 1.17 to 1.84), stroke (OR: 1.36, 95% CI: 1.18 to 1.54), and nonspecific CVDs (OR: 1.50, 95% CI: 1.26 to 1.74)"; "Home exposure has a higher risk of CVD than non-home exposure." | Same as above |
+| State Council Order No. 844 "Decision of the State Council on Amending the 'Housing Provident Fund Management Regulations'" <https://www.gov.cn/gongbao/2026/issue_12946/202608/content_7079363.html> | "Passed at the 93rd executive meeting of the State Council on July 31, 2026, hereby promulgated, effective September 20, 2026." Amended Article 24 (9) covered withdrawal circumstances (including "(1) paying rent", "(4) renovating owner-occupied housing", "(5) paying property-management fees for owner-occupied housing"); Article 25 "a decision to approve or deny withdrawal shall be made within 3 days of accepting the application"; Article 18 "shall not be less than 5% of the employee's average monthly wage for the previous year"; Article 24 final paragraph "where an employee dies or is declared dead, the employee's heirs and legatees may withdraw" | Section 5 "Housing fund isn't only for buying a home" |
+| Work-Related Injury Insurance Regulations Article 15 and Article 14 <https://www.gov.cn/gongbao/content/2011/content_1778064.htm> | Article 15 (1) (1): "during working hours and at the workplace, sudden death from illness or death within 48 hours of failed rescue"; Article 14 (6) covers only commuting injury for "traffic accidents or urban rail transit, ferry, or train accidents in which the person is not principally responsible" | Section 19 "Don't believe 'making it to your workstation counts as workplace injury'" |
+
+## II. Not retrieved / not adopted
+
+| Sought | Result | Handling |
+| --- | --- | --- |
+| Compulsory traffic insurance liability limits (intended for a "buy enough third-party coverage" entry) | "Regulations on Compulsory Motor Vehicle Traffic Accident Liability Insurance" and the banking-regulator comprehensive auto-insurance reform documents are not in the State Council policy document library; this search returned empty | Entry not written |
+| "Notice on Standardizing Children's Trace-Element Clinical Testing" (intended for the Section 6 negative list) | The 2013 NHFPC notice is not in the State Council policy document library | Entry not written |
+| Citable evidence for NMN, talent-gene testing, anti-hair-loss shampoos | No primary literature or official documents found meeting the book's citation rules | None written |
+| The body of "Non-Neonatal Tetanus Diagnostic and Treatment Standards (2024 Edition)" | Published as a PDF attachment; no PDF parsing tool on this machine | Wound-grading and immunization schedule table marked TODO; body only states "go the same day, let the doctor judge" |
+
+## III. About the "making it to your workstation counts as workplace injury" entry
+
+This entry was added based on a reader's question; the source is a short-video claim: someone felt unwell and insisted on driving to work before falling ill, and the family got compensation; someone fell ill at work and went home, then died, and the company did not pay.
+
+Measured against the statute, this claim reverses half the causation. Article 15 requires "during working hours and at the workplace" for sudden illness—what is decisive is **where the person was when illness struck**, not where they died. Falling ill at work, being sent for medical care, and dying within 48 hours despite failed rescue may still apply; falling ill during the commute is covered by Article 14 (6) only for traffic-accident injury, not for illness—so "insisting on driving to the company" is not a guaranteed-win operation legally, and is a clearly bad choice medically.
+
+This entry is therefore written as a correction; the metric is set as mortality rather than money: the behavior to change is "call 120 first, not rush to the destination first"; the benefit magnitude is set as "large" by survival rate.

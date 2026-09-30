@@ -1,0 +1,153 @@
+# Regenerate the three formats whenever the body text changes, attached to the fixed Release "epub-latest" — download links stay the same:
+#   EPUB        https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.epub
+#   PDF         https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.pdf
+#   Offline single-file  https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html
+# PRs only generate and validate, don't publish; outputs land in the artifact on the Actions page.
+name: Ebook
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - index.html
+      - og.png
+      - ads/**
+      - book/**
+      - docs/*.md
+      - tools/**
+      - .github/workflows/book.yml
+  pull_request:
+    paths:
+      - README.md
+      - index.html
+      - og.png
+      - ads/**
+      - book/**
+      - docs/*.md
+      - tools/**
+      - .github/workflows/book.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: book-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PANDOC_VERSION: '3.11'
+  TYPST_VERSION: '0.15.1'
+
+jobs:
+  # Cross-reference check. A standalone job, not chained into build: an unfilled anchor
+  # shouldn't block the EPUB, PDF, and offline-single-file releases — they're two
+  # separate things. The PR still goes red, and what should ship on main still ships.
+  # The local chain (sync-stats.mjs) has to be run to be run,
+  # and external PRs can't run it at all, so this check has to exist in CI. Zero dependencies, a few seconds.
+  refs:
+    name: Cross-reference check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/check-refs.mjs --check
+
+  # Plain-language summary check: length, research jargon, abstract claims. Same reason as above —
+  # standalone job, doesn't block the release.
+  plain:
+    name: Plain-language summary check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/check-plain.mjs
+
+  # Statistics check: whether the entry count, A/B/C counts, link count, etc. in README, index.html, and og.html match book/.
+  # The local sync-stats.mjs only updates when run; PRs merged directly from the web completely bypass it. Same reason as above — doesn't block the release.
+  # Only checks, doesn't modify: having CI push commits to main would diverge from local, and Ubuntu doesn't have Microsoft YaHei, so og.png would be screenshotted wrong.
+  stats:
+    name: Statistics check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/sync-stats.mjs --check
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: tools/epub/package-lock.json
+
+      - run: npm ci
+        working-directory: tools/epub
+
+      - name: EPUB
+        run: node tools/epub/build.mjs
+
+      - name: Offline single-file HTML
+        run: node tools/offline/build.mjs
+
+      - name: Install pandoc, typst, and Chinese fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk
+          curl -sSL "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" | tar xz
+          curl -sSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" | tar xJ
+          echo "$PWD/pandoc-${PANDOC_VERSION}/bin" >> "$GITHUB_PATH"
+          echo "$PWD/typst-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
+
+      - name: PDF
+        run: |
+          typst fonts | grep -i -E 'noto (serif|sans) cjk' || echo 'Noto CJK not found; PDF will fall back to another font — check the fonts-noto-cjk step'
+          node tools/pdf/build.mjs
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: epubcheck
+        run: |
+          curl -sSL -o epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip
+          unzip -q epubcheck.zip
+          java -jar epubcheck-5.4.0/epubcheck.jar dist/HowToLiveBetter.epub
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HowToLiveBetter
+          path: |
+            dist/HowToLiveBetter.epub
+            dist/HowToLiveBetter.pdf
+            dist/HowToLiveBetter.html
+
+      - name: Publish to Release epub-latest
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git tag -f epub-latest
+          git push -f origin epub-latest
+          notes="Body commit ${GITHUB_SHA::7}, generated $(date -u -d '+8 hours' +'%Y-%m-%d %H:%M') (Beijing time). EPUB, PDF, and offline single-file HTML — auto-regenerated after each body-text update; download links stay the same."
+          if gh release view epub-latest >/dev/null 2>&1; then
+            gh release edit epub-latest --title "Ebook (EPUB / PDF / offline HTML, auto-updated)" --notes "$notes"
+          else
+            gh release create epub-latest --title "Ebook (EPUB / PDF / offline HTML, auto-updated)" --notes "$notes" --latest=false
+          fi
+          gh release upload epub-latest \
+            dist/HowToLiveBetter.epub \
+            dist/HowToLiveBetter.pdf \
+            dist/HowToLiveBetter.html --clobber

@@ -1,0 +1,27 @@
+name: Correction: entry is wrong or out of date
+description: Wrong number, changed regulation, broken source link, incorrect claim
+title: "Section X, Entry Y:"
+labels: ["correction"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Which entry
+      description: Write the section number and entry number, e.g., "Section 32, Entry 2."
+      placeholder: Section X, Entry Y
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong
+      description: Quote the original sentence, then say what it should be.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: Journal paper (DOI or PubMed link), statute text, government or official-agency webpage. Secondary paraphrases from Zhihu, WeChat Official Accounts, Baijiahao, etc., cannot be used.
+    validations:
+      required: true

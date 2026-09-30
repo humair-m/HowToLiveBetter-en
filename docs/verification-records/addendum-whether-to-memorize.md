@@ -1,0 +1,29 @@
+# Addendum: "Whether to Memorize by Rote" · Verification Record (2026-09-21)
+
+Task origin: A reader asked "is there content added about whether to memorize by rote?"
+
+Existing coverage: Section 23, Entries 14 to 18 (added in parallel sessions on the same day) cover **how to study** — close the book and self-test, spread time across days, do not treat highlighting and re-reading as the main method, mix several question types in practice, and that learning styles have no evidence. None of them directly answers **whether to memorize**. And Entry 16 is easy to misread: it rejects "re-reading, copying the book" as repeated input, not rejecting "memorization" itself. The everyday term "rote memorization" mixes two meanings (repeated input vs. active retrieval), and they cannot be answered clearly without separating them.
+
+Landing point: Section 23 gets one new entry (Entry 19) appended at the end, with no entry renumbering involved. Three intra-section references, all in the new entry pointing to Entries 14, 15, and 16; the cross-reference table diff shows only these three new lines, with nothing disrupted.
+
+## Section 23, Entry 19
+
+| Source | Verified | Figures |
+|---|---|---|
+| Pan SC, Rickard TC (2018). Transfer of test-enhanced learning: Meta-analytic review and synthesis. Psychological Bulletin 144(7):710-756. <https://doi.org/10.1037/bul0000151> (Europe PMC abstract full text obtained, PMID 29733621) | Yes | 67 published and unpublished articles, 122 experiments, 192 transfer effect sizes, N=10382; under the random-effects model, relative to a "re-exposure but no test" control, d=0.40 (95% CI 0.31–0.50). Strongest transfer: across test formats, application and reasoning questions, medical diagnosis problems, mediation with related-word cues; weakest: rearranged stimulus-response items, materials seen during initial learning but not tested, worked-example-type questions. Moderators: response format consistency, elaborative retrieval practice, initial test performance. After publication-bias correction with PET-PEESE and several selection models, the effect sizes for the moderators are little affected, but the intercept prediction is notably depressed, "often indicating no positive transfer when none of the above moderators are present" |
+
+Graded A: Meta-analysis, effect sizes and confidence intervals verifiable word for word, with built-in publication-bias correction. Benefit tier "medium," metric time — this entry does not save time, it increases the yield of the same time, consistent with the metric used in the same cluster's Entries 14, 15, and 16. Cost willpower "some": what needs changing is the practice method, not adding volume.
+
+The evidence-supported conclusion is **retrieve in the form in which you will use the material later**, not a binary choice between memorizing or not. The depressed-intercept passage must be written into the Benefit field — it is the direct basis for "when memorizing verbatim, or when practice format is misaligned with the test format, transfer may be zero"; removing it would lead to this entry being read as "if you memorize it you can always deploy it."
+
+**Title was reworked once (same day)**: The first draft read "The question 'whether to memorize by rote' is the wrong one: memorize what should be memorized, but test yourself in the form you'll use later." The user immediately pointed out that this is answering the questioner rather than giving advice to the reader — the reader does not hold this question; "the wrong question" has no referent. The entry format requires the title to be a suggestion starting with a verb. Changed to "Memorize what you must, but test yourself in the form you'll use later, do not just memorize it verbatim and call it done." The plain-language summary's ending "so the question isn't whether to memorize, but in what form to memorize" and the Note's "the 'rote memorization' that people criticize ... deserves the criticism" were both removed for the same reason — addressing the questioner with an evaluative tone. The Benefit field, evidence grade, and Source were not changed.
+
+While editing the Note, the `tools/check-refs.mjs` pitfall was hit once: it skips references where "法" (law/method), "办法" (method/measure), or "规定" (regulation/provision) appears within the 16 characters preceding "Entry N" (those are mostly statute article numbers). The reworked Note had "the survey at the bottom of the queue, see Entry 16" and "the practice described, also spread across days, see Entry 15"; the characters "学法" and "做法" fall into this window, and three intra-section references were silently swallowed and disappeared from the cross-reference table, while `--check` reported a pass because there were no references to check. The three missing rows in the cross-reference table were how this was caught. After rewording to "for the rating itself see Entry 16," "specifically see Entry 14," and "spread across days as well, see Entry 15," the 423 places were restored. This section's topic is study methods, and "学法" and "做法" are high-frequency; intra-section references in this section need special avoidance.
+
+## Not written in
+
+The other half — "some foundational content must be memorized because it is the substrate for subsequent capability" (the role of background knowledge in comprehension, basic-fact automation freeing up working memory) — has no verifiable meta-analysis-level source for this round; per the repository's rule, rather not write it, no C-grade padding.
+
+## Statistics
+
+Whole book 594 → 595 entries, A-grade 400 → 401, B-grade 144, C-grade 50 unchanged; disputed 53, TODO 38 unchanged; links 1213 → 1214; cost-effectiveness very high 106, high 272 unchanged, ordinary 216 → 217. README, index.html, tools/og.html written back; og.png re-rendered.
