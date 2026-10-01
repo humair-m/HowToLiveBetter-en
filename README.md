@@ -26,13 +26,13 @@ How to live longer, how to get sick less, what to do when accidents happen. How 
 
 You don't have to do all of them: this is a cost-effectiveness-ranked list of options, not a to-do list — picking one or two counts. The author himself hasn't done most of them either.
 
-[![Online Search](https://img.shields.io/badge/Online%20Search-Click%20Here-3451b2?style=flat-square)](https://eternity4719.github.io/HowToLiveBetter/)
+[![Online Search](https://img.shields.io/badge/Online%20Search-Click%20Here-3451b2?style=flat-square)](https://humair-m.github.io/HowToLiveBetter-en/)
 [![Entries](https://img.shields.io/badge/Entries-631-18794e?style=flat-square)](#table-of-contents)
 [![Evidence Grades](https://img.shields.io/badge/Evidence%20Grades-A%20421%20%C2%B7%20B%20159%20%C2%B7%20C%2051-915930?style=flat-square)](#evidence-grading)
 [![Source Literature](https://img.shields.io/badge/Source%20Literature-1344%20Linked%20Entries-565a5f?style=flat-square)](docs/verification-records/)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-565a5f?style=flat-square)](#license)
 
-### [Open the Online Search Page](https://eternity4719.github.io/HowToLiveBetter/) · [Let AI Answer from the Book (skill)](skills/life-decision-guide/README.md)
+### [Open the Online Search Page](https://humair-m.github.io/HowToLiveBetter-en/) · [Let AI Answer from the Book (skill)](skills/life-decision-guide/README.md)
 
 The AI assistant skill supports Claude Code and Codex. Once installed, ask "Should I sign as a guarantor for a friend?" — it first looks up entries in the book, then answers, citing which section and which entry the answer comes from.
 
@@ -41,7 +41,7 @@ The AI assistant skill supports Claude Code and Codex. Once installed, ask "Shou
 | **Download** | [PDF](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.pdf) · [EPUB](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.epub) · [Offline Single-File HTML](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html) |
 | **Browse** | [Table of Contents](#table-of-contents) · [Glossary](#understanding-the-numbers-glossary) · [Verification Records](docs/verification-records/) |
 | **Long Reads** | [Is Marriage Worth It](docs/marriage-worth-it.md) · [Home Emergency Kit Checklist](docs/home-emergency-kit.md) · [Should You Stop for a Stranger in Trouble](docs/stranger-in-trouble.md) · [What Licenses Are Needed to Run a Platform](docs/platform-licenses.md) · [Biological Clocks and Night Shifts](docs/circadian-night-shift.md) |
-| **Other Languages** | [English](https://dlgrv.github.io/HowToLiveBetter/en/) · [Русский](https://dlgrv.github.io/HowToLiveBetter/ru/) · [Español](https://dlgrv.github.io/HowToLiveBetter/es/) — translations maintained by [dlgrv](https://github.com/dlgrv) ([repo](https://github.com/dlgrv/HowToLiveBetter)) |
+| **Other Languages** | [اردو (Urdu)](ur/) · [English (community)](https://dlgrv.github.io/HowToLiveBetter/en/) · [Русский](https://dlgrv.github.io/HowToLiveBetter/ru/) · [Español](https://dlgrv.github.io/HowToLiveBetter/es/) — community translations maintained by [dlgrv](https://github.com/dlgrv) ([repo](https://github.com/dlgrv/HowToLiveBetter)). The Urdu translation in [`ur/`](ur/) is bundled with this repo (live at `https://humair-m.github.io/HowToLiveBetter-en/ur/` once deployed). |
 | **Derivative Tools** | [howtolivebetter.net](https://howtolivebetter.net/) — a checklist app by [littleben](https://github.com/littleben): add to-dos, mark done, bookmark |
 
 <sub>Other languages and derivative tools are maintained by others and may lag behind. The Chinese original in this repository is the authoritative version.</sub>
@@ -93,7 +93,7 @@ The AI assistant skill supports Claude Code and Codex. Once installed, ask "Shou
 
 - **You don't have to do everything**: This is a cost-effectiveness-ranked list of options, not a to-do list. Pick one or two and that counts. Leave the rest; come back when needed. "Easier said than done" is fair — the author himself hasn't done most of them either; they're written down so they can be found when needed. To pick the easy ones, see "Just want to see the most worthwhile" below.
 - **Want AI to help look things up**: The repo includes a Chinese skill ([skills/life-decision-guide](skills/life-decision-guide/)) that works with both Claude Code and Codex. After installing, just ask "Should I sign as a guarantor for a friend?" or "Is a two-hour daily commute worth it?" It first pulls relevant entries from the main text, then ranks and answers them in the book's accounting style, citing which section and entry the answer comes from. If it can't find it, it says so — it doesn't make up numbers. See [that directory's README](skills/life-decision-guide/README.md) for installation.
-- **Want to filter by criteria**: Open the [Online Search Page](https://eternity4719.github.io/HowToLiveBetter/), where you can filter by keyword, chapter, and evidence grade. You can also filter by three dimensions — "costs money, costs time, requires willpower" — and combine these filters. The page content is pulled directly from the text in the `book/` directory; when the text changes, the page updates with it.
+- **Want to filter by criteria**: Open the [Online Search Page](https://humair-m.github.io/HowToLiveBetter-en/), where you can filter by keyword, chapter, and evidence grade. You can also filter by three dimensions — "costs money, costs time, requires willpower" — and combine these filters. The page content is pulled directly from the text in the `book/` directory; when the text changes, the page updates with it.
 - **Entries point to each other** ("see Section 8, Entry 17" style): On the search page, such pointers carry a dashed line. Click to expand the title and "plain-language summary" of the target entry inline. To actually jump there, click "Jump to". If the target entry is hidden by the current filter, the page automatically clears the filter. On GitHub, the pointers aren't clickable in raw markdown, but each pointer explicitly states its target (e.g., "see Entry 18 — Write a Clear IOU When Lending Money"), so you know what's being referenced without clicking through.
 - **Want to read in order**: Entries within each section are sorted by cost-effectiveness from high to low; start with the first few entries of each section.
 - **Want offline reading or to share with someone**: Download the [Offline Single-File HTML](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html) — the entire book with search and filtering in one file, double-click to open, no server or internet needed, even works in WeChat.
@@ -119,7 +119,7 @@ Each piece of advice looks like this:
 
 ## Run It Yourself
 
-Most people don't need to deploy: the [Online Search Page](https://eternity4719.github.io/HowToLiveBetter/) is ready-made; for offline, download the [Offline Single-File HTML](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html) and double-click.
+Most people don't need to deploy: the [Online Search Page](https://humair-m.github.io/HowToLiveBetter-en/) is ready-made; for offline, download the [Offline Single-File HTML](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html) and double-click.
 
 If you really want to run it on your own machine or server:
 
@@ -280,7 +280,7 @@ The `index.html` in the repo root is the online search page: filter entries by k
 
 ## Main Text
 
-The main text is split across 34 files in [book/](book/) — click section names in the TOC above to enter. The split is because the single file already exceeds GitHub's 512 KB Markdown-rendering limit, and later sections wouldn't display. The [Online Search Page](https://eternity4719.github.io/HowToLiveBetter/) reads these files merged together; usage stays the same.
+The main text is split across 34 files in [book/](book/) — click section names in the TOC above to enter. The split is because the single file already exceeds GitHub's 512 KB Markdown-rendering limit, and later sections wouldn't display. The [Online Search Page](https://humair-m.github.io/HowToLiveBetter-en/) reads these files merged together; usage stays the same.
 
 ## License
 

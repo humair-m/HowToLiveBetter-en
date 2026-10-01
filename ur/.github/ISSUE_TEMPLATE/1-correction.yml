@@ -1,0 +1,27 @@
+name: تصحیح: اندراج غلط ہے یا پرانا ہو گیا ہے
+description: غلط عدد، بدلے ہوئے ضوابط، ٹوٹا ہوا ماخذ لنک، غلط دعویٰ
+title: "سیکشن X، اندراج Y:"
+labels: ["correction"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: کون سا اندراج
+      description: سیکشن نمبر اور اندراج نمبر لکھیں، مثلاً "سیکشن 32، اندراج 2۔"
+      placeholder: سیکشن X، اندراج Y
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: کیا غلط ہے
+      description: اصل جملہ اقتباس کریں، پھر بتائیں کہ اسے کیا ہونا چاہیے۔
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: ماخذ
+      description: جرنل پیپر (DOI یا PubMed لنک)، مجرمانہ/شہری قانون کا متن، حکومت یا سرکاری ادارے کا ویب پیج۔ Zhihu، WeChat Official Accounts، Baijiahao وغیرہ سے ثانوی paraphrase قبول نہیں ہیں۔
+    validations:
+      required: true

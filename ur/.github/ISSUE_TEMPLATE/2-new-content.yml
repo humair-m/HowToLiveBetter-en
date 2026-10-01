@@ -1,0 +1,28 @@
+name: نئے مواد کی تجویز
+description: کوئی موضوع جسے شامل کرنا بھرپور ہو اور جس پر کتاب ابھی ایسی نہیں چھپی
+labels: ["new content"]
+body:
+  - type: markdown
+    attributes:
+      value: یہ کتاب صرف اس مشورے کو جمع کرتی ہے جو یہ بتا سکے کہ "اس کی لاگت کیا ہے اور اس سے کیا حاصل ہوتا ہے،" اور صرف جرنل پیپرز اور سرکاری دستاویزات کو حوالہ دیتی ہے۔ ترجمے آپ کے اپنے fork میں محفوظ رکھے جائیں اور اس ریپوزیٹری میں ضم نہ کیے جائیں؛ README کے اوپر ایک لنک لگایا جا سکتا ہے۔
+  - type: input
+    id: topic
+    attributes:
+      label: موضوع
+      placeholder: مثلاً، کسی پیشہ ورانہ عنوان کے لیے کیسے درخواست دیں
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: کتاب کس سوال کا جواب دے
+      description: واضح ہو، مثلاً "کس ادارے میں جانا ہے، کون سے دستاویزات تیار کرنے ہیں۔"
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: آپ کو جو ماخذ معلوم ہیں (اختیاری)
+      description: پیپرز، ضوابط، سرکاری دستاویزات کے لنک۔
+    validations:
+      required: false

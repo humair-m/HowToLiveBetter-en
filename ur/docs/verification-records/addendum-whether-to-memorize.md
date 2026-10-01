@@ -1,0 +1,29 @@
+# اضافہ: "رات کو رٹہ لگانا چاہیے یا نہیں" · تصدیقی ریکارڈ (2026-09-21)
+
+کام کا ماخذ: ایک قاری نے پوچھا "کیا رٹہ لگانے کے بارے میں مواد شامل کیا گیا ہے؟"
+
+موجودہ کوریج: سیکشن 23، اندراجات 14 سے 18 (اسی دن parallel سیشنز میں شامل کیے گئے) **کیسے study کرنا ہے** پر cover کرتے ہیں — کتاب بند کر کے self-test، وقت کو دنوں میں پھیلانا، highlighting اور re-reading کو main طریقہ کے طور پر نہ لینا، practice میں متعدد question types mix کرنا، اور learning styles کے پاس کوئی ثبوت نہیں ہے۔ ان میں سے کوئی بھی براہ راست **کیا memorize کرنا چاہیے** کا جواب نہیں دیتا۔ اور اندراج 16 misread ہونے کے لیے آسان ہے: یہ "re-reading، book copy کرنا" کو repeated input کے طور پر reject کرتا ہے، "memorization" خود کو reject نہیں کرتا۔ عام اصطلاح "rote memorization" دو معانی mix کرتی ہے (repeated input بمقابلہ active retrieval)، اور انہیں separate کیے بغیر واضح جواب نہیں دیا جا سکتا۔
+
+اختتامی نقطہ: سیکشن 23 کو ایک نیا اندراج (اندراج 19) آخر میں append کیا گیا، کوئی اندراج renumbering involve نہیں۔ تین intra-section references، سب نئے اندراج میں اندراجات 14، 15، اور 16 کی طرف point کرتے ہیں؛ cross-reference table diff صرف یہ تین نئی lines دکھاتا ہے، کچھ disrupt نہیں ہوا۔
+
+## سیکشن 23، اندراج 19
+
+| ماخذ | تصدیق شدہ | اعداد |
+|---|---|---|
+| Pan SC, Rickard TC (2018). Transfer of test-enhanced learning: Meta-analytic review and synthesis. Psychological Bulletin 144(7):710-756. <https://doi.org/10.1037/bul0000151> (Europe PMC abstract full text obtained, PMID 29733621) | ہاں | 67 published اور unpublished articles، 122 experiments، 192 transfer effect sizes، N=10382؛ random-effects model کے تحت، "re-exposure but no test" control کی نسبت، d=0.40 (95% CI 0.31–0.50)۔ Strongest transfer: test formats میں، application اور reasoning questions، medical diagnosis problems، related-word cues کے ساتھ mediation؛ weakest: rearranged stimulus-response items، initial learning کے دوران دیکھا گیا material مگر test نہیں کیا گیا، worked-example-type questions۔ Moderators: response format consistency، elaborative retrieval practice، initial test performance۔ PET-PEESE اور متعدد selection models کے ساتھ publication-bias correction کے بعد، moderators کے effect sizes پر بہت کم اثر پڑتا ہے، مگر intercept prediction notably depressed ہے، "اکثر indicating کرتا ہے کہ جب اوپر کے moderators میں سے کوئی بھی موجود نہ ہو تو کوئی positive transfer نہیں ہوتی" |
+
+A درجہ: Meta-analysis، effect sizes اور confidence intervals لفظ بہ لفظ verifiable، built-in publication-bias correction کے ساتھ۔ فائدہ کا درجہ "درمیانہ،" پیمانہ وقت — یہ اندراج وقت نہیں بچاتا، یہ اسی وقت کی yield بڑھاتا ہے، اسی cluster کے اندراجات 14، 15، اور 16 میں استعمال ہونے والے metric کے consistent۔ لاگت willpower "کچھ": جو تبدیل کرنے کی ضرورت ہے وہ practice طریقہ ہے، volume add کرنا نہیں۔
+
+ثبوت سے supported conclusion وہ ہے جو **after میں material استعمال کرنے کی form میں retrieve کرنا ہے**، memorize کرنے یا نہ کرنے کے درمیان binary choice نہیں۔ Depressed-intercept passage کو Benefit field میں لکھنا ضروری ہے — یہ "jab memorize کرتے ہوئے، یا جب practice format test format کے ساتھ misalign ہو، تو transfer صفر ہو سکتی ہے" کا direct basis ہے؛ اسے ہٹانا اس اندراج کو "اگر آپ memorize کر لیں تو آپ ہمیشہ اسے deploy کر سکتے ہیں" کے طور پر پڑھے جانے کا باعث بنے گا۔
+
+**Title ایک بار rework کیا گیا (اسی دن)**: پہلے draft میں پڑھتا تھا "رات کو رٹہ لگانے کا سوال غلط ہے: جو memorize کرنا چاہیے اسے memorize کریں، مگر بعد میں استعمال کی form میں خود کو test کریں۔" صارف نے فوراً نشاندہی کی کہ یہ قاری کو جواب دینا ہے، قاری کو advice دینا نہیں — قاری یہ سوال نہیں رکھتا؛ "غلط سوال" کا کوئی referent نہیں۔ اندراج format میں title کا verb سے شروع ہونے والی suggestion ہونا ضروری ہے۔ تبدیل کر کے "جو memorize کرنا ضروری ہے اسے memorize کریں، مگر بعد میں استعمال کی form میں خود کو test کریں، صرف لفظ بہ لفظ memorize کر کے مکمل نہ کہیں۔" آسان الفاظ میں کے اختتام "تو سوال memorize کرنا ہے یا نہیں نہیں، بلکہ کس form میں memorize کرنا ہے" اور Note کا "لوگ جس rite memorization کی تنقید کرتے ہیں ... تنقید کی مستحق ہے" دونوں اسی وجہ سے remove کیے گئے — evaluative tone کے ساتھ questioner کو address کرنا۔ Benefit field، evidence grade، اور Source تبدیل نہیں کیے گئے۔
+
+Note edit کرتے ہوئے، `tools/check-refs.mjs` کا pitfall ایک بار hit ہوا: یہ ان references کو skip کرتا ہے جہاں "法" (law/method)، "办法" (method/measure)، یا "规定" (regulation/provision) "Entry N" سے پہلے 16 characters کے اندر appear ہوتے ہیں (یہ زیادہ تر statute article numbers ہیں)۔ Reworked Note میں "queue کے نچلے حصے میں survey، دیکھیں اندراج 16" اور "practice describe شدہ، بھی دنوں میں پھیلا ہوا، دیکھیں اندراج 15" تھا؛ characters "学法" اور "做法" اس window میں آتے ہیں، اور تین intra-section references silently swallow ہو کر cross-reference table سے disappear ہو گئے، جبکہ `--check` نے پاس report کیا کیونکہ check کرنے کے لیے کوئی references نہیں تھے۔ Cross-reference table میں تین missing rows کی وجہ سے یہ catch ہوا۔ "rating خود کے لیے دیکھیں اندراج 16،" "specifically دیکھیں اندراج 14،" اور "دنوں میں پھیلا ہوا بھی، دیکھیں اندراج 15" میں rewording کے بعد، 423 جگہیں restore ہوئیں۔ اس سیکشن کا موضوع study methods ہے، اور "学法" اور "做法" high-frequency ہیں؛ اس سیکشن میں intra-section references میں خاص بچاؤ ضروری ہے۔
+
+## نہیں لکھا گیا
+
+دوسرا half — "کچھ foundational content memorize کرنا ضروری ہے کیونکہ یہ subsequent capability کا substrate ہے" (comprehension میں background knowledge کا کردار، basic-fact automation کا working memory کو free کرنا) — اس دور میں کوئی verifiable meta-analysis-level source نہیں ہے؛ repository کے rule کے مطابق، اسے نہیں لکھنا بہتر ہے، کوئی C درجے کی padding نہیں۔
+
+## شماریات
+
+پوری کتاب 594 → 595 اندراج، A درجہ 400 → 401، B درجہ 144، C درجہ 50 تبدیل نہیں؛ disputed 53، TODO 38 تبدیل نہیں؛ لنکس 1213 → 1214؛ cost-effectiveness very high 106، high 272 تبدیل نہیں، ordinary 216 → 217۔ README، index.html، tools/og.html back write کیے گئے؛ og.png دوبارہ render کیا گیا۔

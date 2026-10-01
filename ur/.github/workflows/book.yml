@@ -1,0 +1,160 @@
+# یہ ورک فلو اردو ترجمے والے fork میں غیر فعال ہے۔
+# دوبارہ فعال کرنے کے لیے، ہر job پر موجود `if: false` ہٹا دیں۔
+#
+# جب بھی متن بدلے تو تینوں فارمیٹس دوبارہ بنائے جاتے ہیں، فکسڈ Release "epub-latest" سے منسلک — ڈاؤن لوڈ لنکس وہی رہتے ہیں:
+#   EPUB        https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.epub
+#   PDF         https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.pdf
+#   Offline single-file  https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html
+# PRs صرف بنا کر تصدیق کرتے ہیں، شائع نہیں کرتے؛ آؤٹ پٹ Actions پیج پر artifact میں آتے ہیں۔
+name: Ebook (Urdu — disabled by default)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - index.html
+      - og.png
+      - ads/**
+      - book/**
+      - docs/*.md
+      - tools/**
+      - .github/workflows/book.yml
+  pull_request:
+    paths:
+      - README.md
+      - index.html
+      - og.png
+      - ads/**
+      - book/**
+      - docs/*.md
+      - tools/**
+      - .github/workflows/book.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: book-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PANDOC_VERSION: '3.11'
+  TYPST_VERSION: '0.15.1'
+
+jobs:
+  # کراس ریفرنس چیک۔ ایک الگ job، build میں زنجیر نہیں ہے: کوئی ان بھرا ہوا anchor
+  # EPUB، PDF اور آف لائن سنگل فائل ریلیز کو بلاک نہیں کرنا چاہیے — یہ دو الگ
+  # چیزیں ہیں۔ PR اب بھی سرخ ہوگا، اور main پر جو شپ ہونا چاہیے وہ اب بھی شپ ہوگا۔
+  # لوکل چین (sync-stats.mjs) چلنا ضروری ہے،
+  # اور بیرونی PRs اسے بالکل نہیں چلا سکتے، اس لیے یہ چیک CI میں موجود ہونا چاہیے۔ صفر dependencies، چند سیکنڈ۔
+  refs:
+    if: false
+    name: کراس ریفرنس چیک
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/check-refs.mjs --check
+
+  # آسان زبان والے خلاصے کی چیک: لمبائی، ریسرچ اصطلاحات، خلاصہ دعوے۔ اوپر والی وجہ سے —
+  # الگ job، ریلیز کو بلاک نہیں کرتا۔
+  plain:
+    if: false
+    name: آسان زبان والے خلاصے کی چیک
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/check-plain.mjs
+
+  # اعداد و شمار کی چیک: README، index.html اور og.html میں اندراجوں کی تعداد، A/B/C گنتی، لنک گنتی وغیرہ کیا book/ سے ملتی ہے۔
+  # لوکل sync-stats.mjs صرف چلنے پر اپ ڈیٹ کرتا ہے؛ ویب سے براہ راست ضم ہونے والے PRs اسے مکمل بائی پاس کرتے ہیں۔ اوپر والی وجہ سے — ریلیز کو بلاک نہیں کرتا۔
+  # صرف چیک کرتا ہے، تبدیلی نہیں کرتا: CI کا main پر commit کرنا لوکل سے ہٹ جائے گا، اور Ubuntu میں Microsoft YaHei نہیں ہے، اس لیے og.png غلط سکرین شاٹ ہوگا۔
+  stats:
+    if: false
+    name: اعداد و شمار کی چیک
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/sync-stats.mjs --check
+
+  build:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: tools/epub/package-lock.json
+
+      - run: npm ci
+        working-directory: tools/epub
+
+      - name: EPUB
+        run: node tools/epub/build.mjs
+
+      - name: آف لائن سنگل فائل HTML
+        run: node tools/offline/build.mjs
+
+      - name: pandoc، typst اور چینی فونٹس انسٹال کریں
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk
+          curl -sSL "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" | tar xz
+          curl -sSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" | tar xJ
+          echo "$PWD/pandoc-${PANDOC_VERSION}/bin" >> "$GITHUB_PATH"
+          echo "$PWD/typst-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
+
+      - name: PDF
+        run: |
+          typst fonts | grep -i -E 'noto (serif|sans) cjk' || echo 'Noto CJK نہیں ملا؛ PDF کسی اور فونٹ پر ریڑھ لے گا — fonts-noto-cjk والے مرحلے کی جانچ کریں'
+          node tools/pdf/build.mjs
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: epubcheck
+        run: |
+          curl -sSL -o epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip
+          unzip -q epubcheck.zip
+          java -jar epubcheck-5.4.0/epubcheck.jar dist/HowToLiveBetter.epub
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HowToLiveBetter
+          path: |
+            dist/HowToLiveBetter.epub
+            dist/HowToLiveBetter.pdf
+            dist/HowToLiveBetter.html
+
+      - name: Release epub-latest پر شائع کریں
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git tag -f epub-latest
+          git push -f origin epub-latest
+          notes="Body commit ${GITHUB_SHA::7}, generated $(date -u -d '+8 hours' +'%Y-%m-%d %H:%M') (Beijing time). EPUB، PDF اور آف لائن سنگل فائل HTML — متن کی ہر اپ ڈیٹ کے بعد خودکار دوبارہ بنائے جاتے ہیں؛ ڈاؤن لوڈ لنکس وہی رہتے ہیں۔"
+          if gh release view epub-latest >/dev/null 2>&1; then
+            gh release edit epub-latest --title "Ebook (EPUB / PDF / offline HTML, auto-updated)" --notes "$notes"
+          else
+            gh release create epub-latest --title "Ebook (EPUB / PDF / offline HTML, auto-updated)" --notes "$notes" --latest=false
+          fi
+          gh release upload epub-latest \
+            dist/HowToLiveBetter.epub \
+            dist/HowToLiveBetter.pdf \
+            dist/HowToLiveBetter.html --clobber

@@ -1,0 +1,29 @@
+# اضافہ: Acute glaucoma attack اور blue-light filtering اندراج کی boundary · تصدیقی ریکارڈ (2026-09-21)
+
+کام کا ماخذ: ایک قاری نے پوچھا کہ آیا سیکشن 6، اندراج 16 (blue-light filtering glasses) problematic ہے — "کیا ہو اگر آپ رات بھر جاگ کر دس گھنٹے سے زیادہ اسکرین دیکھیں؟"
+
+موجودہ کوریج: سیکشن 6، اندراج 16 کا پہلا half (blue-light filtering lenses useless ہیں) Cochrane سے backed ہے اور ٹھیک ہے۔ دوسرا half، "اسکرین دیکھنے سے تھکی ہوئی اور خشک آنکھیں recover ہو سکتی ہیں،" ایک statement کے طور پر بغیر boundaries لکھا گیا تھا اور "اسکرین دیکھنا آنکھوں کو نقصان نہیں پہنچا سکتا" کے طور پر پڑھا جاتا ہے۔ پوری کتاب میں "glaucoma" اور "intraocular pressure" کی تلاش سے صفر ہٹس ملتے ہیں؛ سیکشن 13 کا ophthalmologic emergency صرف اندراج 5 ہے (ایک آنکھ اچانک اندھی ہو جانا، وہ قسم جو بغیر درد یا سرخی کے ہو)۔ تو جو غائب ہے وہ دوسرا half ہے: وہ قسم جس میں درد، سرخی، اور lights کے گرد rainbow rings ہوں۔ وہ acute angle-closure glaucoma ہے، جو دنوں میں optic nerve کو نقصان پہنچا سکتا ہے، اور "dark environments، prolonged head-down، dilated pupils" بالکل رات بھر جاگ کر فون دیکھنے کی posture ہے۔
+
+اختتامی نقطہ: سیکشن 13 کو ایک نیا اندراج (اندراج 6، اندراج 5 کے بعد insert، اصل اندراجات 6 سے 42 کو 7 سے 43 پر renumber کیا گیا) ملتا ہے؛ سیکشن 6، اندراج 16 کا title تبدیل کیا گیا، آسان الفاظ میں دوبارہ لکھا گیا، اور Note میں اس exception کے ساتھ pointer شامل کیا گیا۔
+
+Renumbering کے بعد updated references: book/01 اندراجات 26، 31، اور 32 (سیکشن 13، اندراج 11→12، 18→19، 19→20، 10→11)؛ book/08 اندراج 11 (38→39)؛ book/17 اندراج 8 (10→11)؛ book/19 اندراج 11 (20→21)؛ docs/家庭应急装备清单.md چار جگہوں پر (25→26، 11→12، 13→14، 14→15)؛ docs/遇到陌生人出事该不该停.md ایک جگہ (40→41)؛ اور سیکشن 13 کے اندر گیارہ جگہوں پر۔ سیکشن 13، اندراج 38 کی Note میں Guiding Opinions کے Items 5 اور 9 کا reference statutory article numbers ہیں اور تبدیل نہیں کیے گئے۔ docs/引用对照.md diff line by line review کیا گیا: ہر line میں ایک اندراج number تبدیلی دکھائی دیتی ہے جس میں pointed-to title unchanged ہے؛ کچھ disrupt نہیں ہوا۔
+
+## سیکشن 13، اندراج 6 (Acute angle-closure glaucoma)
+
+| ماخذ | تصدیق شدہ | اعداد |
+|---|---|---|
+| Zhou L, Wu S, Wang Y, Bao X, Peng T, Luo W, Ortega-Usobiaga J (2022). Clinical presentation of acute primary angle closure during the COVID-19 epidemic lockdown. Front Med 9:1078237. <https://doi.org/10.3389/fmed.2022.1078237> (Europe PMC abstract full text obtained, PMID 36590933) | ہاں | 2020 میں 76-day lockdown میں 54 افراد اور 64 آنکھیں؛ 2021 میں same period میں 46 افراد اور 51 آنکھیں تھیں؛ blindness proportion 21.87% بمقابلہ 7.84%؛ symptom onset سے treatment تک 241.84±211.95 h بمقابلہ 121.53±96.12 h (P=0.001)؛ presentation پر intraocular pressure 52.63±12.45 بمقابلہ 45.16±9.79 mmHg (P=0.001)؛ pupil diameter 5.47±1.62 بمقابلہ 4.33±1.27 mm (P=0.001)؛ glaucomatous optic neuropathy 20/64 (31.25%) بمقابلہ 7/51 (13.73%) (P=0.03) |
+| Sung MS, Kim HJ, Park SW (2023). Predictors of long-term visual field outcome after an episode of acute primary angle closure. Clin Exp Ophthalmol 51(4):291-299. <https://doi.org/10.1111/ceo.14206> (PMID 36641235) | ہاں | 50 افراد، 50 آنکھیں، سب attack کے بعد lens extraction surgery سے گزرے؛ ایک سال بعد، 25 آنکھیں (50%) visual field defects رکھتی تھیں؛ symptom onset سے intraocular pressure reduction تک time (p=0.005)، presentation پر intraocular pressure (p=0.014)، اور flat iris curvature (p=0.037) تین predictors تھے؛ مل کر، AUC=0.921 |
+| Wang J, Wang J, Ng TK, Huang C (2025). Asymmetric intraocular pressure changes in dominant and contralateral eyes: the dark room prone provocative test. Semin Ophthalmol 40(4):325-331. <https://doi.org/10.1080/08820538.2024.2443972> (PMID 39844657) | ہاں | shallow anterior chamber رکھنے والے 43 individuals، 86 آنکھیں؛ dark room میں prone position میں ایک گھنٹے کے بعد، دونوں آنکھوں کا intraocular pressure significantly بڑھ گیا (p<.01)؛ dominant eye median rise 3.60 mmHg، contralateral eye 2.70 mmHg (p<.05) |
+
+B درجہ: تینوں observational studies ہیں، پہلے دو single-center retrospective؛ Wuhan group میں lockdown خود کی لائی ہوئی differences بھی confound ہوتی ہیں۔ فائدہ کا درجہ "بڑا" — پیمانہ mortality / health endpoint ہے، اور blindness irreversible ہے۔ لاگت سیکشن 13 کے دیگر emergency اندراجات کی convention کے مطابق ہے: "money=0 time=درمیانہ۔"
+
+جان بوجھ کر باڈی میں نہیں لکھا گیا: ① کوئی study یہ ثابت نہیں کرتا کہ "فون دیکھنا glaucoma کا سبب بنتا ہے"؛ باڈی صرف یہ لکھتی ہے کہ dark environments plus prolonged head-down posture ایک trigger ہے، noting کرتی ہے کہ high-risk group 50 سال سے زیادہ، farsighted، اور shallow anterior chambers رکھنے والے ہیں، اور رات بھر جاگنے والے young people اس راستے پر نہیں جاتے؛ ② Central serous chorioretinopathy (رات بھر جاگنے اور stress سے وابستہ؛ ایک Retina 2016 meta-analysis نے sleep disorders OR=1.90 دیا) نہیں لکھا گیا، کیونکہ abstract میں printed 95% CI 1.28–1.83 تھا، جس کا lower bound upper bound سے بڑا ہے، ایک واضح typographical error، اور correct interval verifiable form میں obtain نہیں ہو سکا؛ ③ اسکرین workers میں dry eye prevalence (BMJ Open 2016، تین objective criteria نے 11.6%، 95% CI 10.5–12.9 دیا) Benefit field میں نہیں لکھا گیا؛ سیکشن 6، اندراج 16 کی Note میں صرف ایک line ہے کہ "dry eye جو drag ہو وہ chronic بن سکتی ہے،" اب بھی C درجے کا consensus۔
+
+## سیکشن 6، اندراج 16 (blue-light filtering glasses) میں تبدیلیاں
+
+Evidence grade، Source، اور Benefit field untouched۔ تین تبدیلیاں: title کی tail میں "، مگر آنکھ کا درد اور سرخی emergency کے طور پر treat کریں" شامل ہوا؛ آسان الفاظ میں 120 characters کے اندر دوبارہ لکھا گیا، Benefit field میں موجود assertions remove کیے گئے؛ Note میں یہ exception، اس کے triggers اور high-risk groups، اور یہ line کہ dry eye chronic بن سکتی ہے، شامل کیا گیا، سیکشن 13، اندراج 6 کی طرف pointer کے ساتھ۔
+
+## شماریات
+
+پوری کتاب 574 → 575 اندراج، A درجہ 385 تبدیل نہیں، B درجہ 139 → 140، C درجہ 50 تبدیل نہیں؛ disputed 51، TODO 38 تبدیل نہیں؛ book/ کے تحت اصل ادبی لنکس 1176 → 1179؛ cost-effectiveness very high 105، high 267، ordinary 203۔
