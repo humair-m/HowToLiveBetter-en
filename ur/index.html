@@ -551,19 +551,19 @@ function parseReadme(md){
       continue;
     }
     if (entry){
-      if ((m = /^- Cost: (.*)$/.exec(line))) entry.cost = m[1];
-      else if ((m = /^- Plain-language summary: (.*)$/.exec(line))) entry.human = m[1];
-      else if ((m = /^- Benefit: (.*)$/.exec(line))) entry.gain = m[1];
-      else if ((m = /^- Evidence grade: \s*([ABC])/.exec(line))) entry.grade = m[1];
-      else if ((m = /^- Source: (.*)$/.exec(line))) entry.src = m[1];
-      else if ((m = /^- Note: (.*)$/.exec(line))) entry.note = m[1];
+      if ((m = /^- (?:Cost|لاگت): (.*)$/.exec(line))) entry.cost = m[1];
+      else if ((m = /^- (?:Plain-language summary|آسان الفاظ میں): (.*)$/.exec(line))) entry.human = m[1];
+      else if ((m = /^- (?:Benefit|فائدہ): (.*)$/.exec(line))) entry.gain = m[1];
+      else if ((m = /^- (?:Evidence grade|ثبوت کا درجہ):\s*([ABC])/.exec(line))) entry.grade = m[1];
+      else if ((m = /^- (?:Source|ماخذ): (.*)$/.exec(line))) entry.src = m[1];
+      else if ((m = /^- (?:Note|نوٹ): (.*)$/.exec(line))) entry.note = m[1];
       continue;
     }
     if (line) sec.intro.push(line);   // پہلے اندراج سے پہلے ہر تعارفی پیراگراف جمع ہوتا ہے، صرف پہلا نہیں
   }
   flush();
   for (const s of sections) for (const e of s.entries){
-    e.dispute = /^Controvers/.test(e.note);
+    e.dispute = /^(?:Controvers|تنازعہ)/.test(e.note);
     e.todo = /TODO|to be verified|to verify\b/i.test(e.src + e.gain + e.note + e.cost);
     e.cs = (COST_W.money[e.money] ?? 0) + (COST_W.time[e.time] ?? 0) + (COST_W.will[e.will] ?? 0);
     e.ratio = e.level === '大' ? (e.cs === 0 ? '极高' : (e.cs <= 2 ? '高' : '一般'))
@@ -576,12 +576,12 @@ function parseReadme(md){
 /* ---------- لغت ---------- */
 let GLOSS = [];   // [{term, meaning, re}]
 function parseGlossary(md){
-  const m = /^## Understanding the Numbers[^\n]*\n([\s\S]*?)(?=^## )/m.exec(md);
+  const m = /^## (?:Understanding the Numbers|اعداد سمجھنا)[^\n]*\n([\s\S]*?)(?=^## )/m.exec(md);
   if (!m) return [];
   const rows = [];
   for (const line of m[1].split(/\r?\n/)){
     const c = /^\|\s*(.+?)\s*\|\s*(.+?)\s*\|$/.exec(line);
-    if (!c || c[1] === 'Term' || /^-+$/.test(c[1])) continue;
+    if (!c || c[1] === 'Term' || c[1] === 'اصطلاح' || /^-+$/.test(c[1])) continue;
     for (const t of c[1].split(/[、,]/)){
       const term = t.trim(); if (!term) continue;
       rows.push({term, meaning: c[2], latin: /^[A-Za-z0-9%. ]+$/.test(term)});
